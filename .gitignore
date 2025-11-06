@@ -4,3 +4,5 @@ uploads/
 .venv/
 debug_crop.jpg
 debug_prepped.jpg
+.env
+debug_soft.jpg

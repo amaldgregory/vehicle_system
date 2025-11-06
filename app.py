@@ -7,6 +7,9 @@ from email_sender import send_alert_email
 from werkzeug.utils import secure_filename
 from PIL import Image
 import io
+from dotenv import load_dotenv
+load_dotenv()
+
 
 ALLOWED_EXT = {"png", "jpg", "jpeg", "bmp"}
 UPLOAD_FOLDER = "uploads"

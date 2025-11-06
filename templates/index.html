@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>License Plate Detector</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <style>
+      body { font-family: Arial, sans-serif; padding: 24px; max-width: 800px; margin: auto;}
+      .preview { max-width: 100%; height: auto; margin-top: 10px; }
+      .status { margin-top: 12px; padding: 8px; border-radius: 6px; }
+    </style>
+  </head>
+  <body>
+    <h1>License Plate Detector</h1>
+    <p>Select a photo with a vehicle license plate and click Upload.</p>
+
+    <input type="file" id="imageInput" accept="image/*"/>
+    <br/>
+    <img id="preview" class="preview" />
+    <br/>
+    <button id="uploadBtn">Upload</button>
+
+    <div id="result" class="status"></div>
+
+    <script src="/static/upload.js"></script>
+  </body>
+</html>

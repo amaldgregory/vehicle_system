@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>License Plate Detector Logs</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 24px;
+        max-width: 900px;
+        margin: auto;
+      }
+      h1 {
+        text-align: center;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      th, td {
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+        text-align: left;
+      }
+      th {
+        background: #f4f4f4;
+      }
+      .banned {
+        color: red;
+        font-weight: bold;
+      }
+      .allowed {
+        color: green;
+        font-weight: bold;
+      }
+      img {
+        width: 100px;
+        border-radius: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>License Plate Detection Logs</h1>
+    <table id="logTable">
+      <thead>
+        <tr>
+          <th>Image</th>
+          <th>Raw Plate</th>
+          <th>Normalized</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <script>
+      async function loadLogs() {
+        const res = await fetch("/api/logs");
+        const logs = await res.json();
+        const tbody = document.querySelector("#logTable tbody");
+        tbody.innerHTML = "";
+
+        logs.slice().reverse().forEach(log => {
+          const row = document.createElement("tr");
+          const imgCell = `<td><img src="/uploads/${log.image}" alt="plate"></td>`;
+          const rawCell = `<td>${log.plate_raw || "-"}</td>`;
+          const normCell = `<td>${log.plate_normalized || "-"}</td>`;
+          const statusCell = `<td class="${log.banned ? 'banned' : 'allowed'}">
+                                ${log.banned ? 'BANNED' : 'ALLOWED'}
+                              </td>`;
+          row.innerHTML = imgCell + rawCell + normCell + statusCell;
+          tbody.appendChild(row);
+        });
+      }
+
+      loadLogs();
+      setInterval(loadLogs, 5000);
+    </script>
+  </body>
+</html>

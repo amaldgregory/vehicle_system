@@ -13,6 +13,7 @@ load_dotenv()
 
 ALLOWED_EXT = {"png", "jpg", "jpeg", "bmp"}
 UPLOAD_FOLDER = "uploads"
+LOG_FILE = "scan_log.json"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 app = Flask(__name__)
@@ -23,9 +24,17 @@ with open("banned_plates.json", "r") as f:
     banned_data = json.load(f)
 BANNED_SET = set([normalize_plate_string(x) for x in banned_data.get("banned", [])])
 
+if not os.path.exists(LOG_FILE):
+    with open(LOG_FILE, "w") as f:
+        json.dump([], f)
+        
 @app.route("/")
 def index():
     return render_template("index.html")
+
+@app.route("/logger")
+def logger():
+    return render_template("logger.html")
 
 def allowed_file(filename):
     return "." in filename and filename.rsplit(".", 1)[1].lower() in ALLOWED_EXT
@@ -67,9 +76,26 @@ def upload():
         with open(os.path.join(app.config["UPLOAD_FOLDER"], fname), "wb") as f:
             f.write(data)
 
+        with open(LOG_FILE, "r+") as f:
+            logs = json.load(f)
+            logs.append({
+                "plate_raw": plate,
+                "plate_normalized": normalized,
+                "banned": response["banned"],
+                "image": fname
+            })
+            f.seek(0)
+            json.dump(logs, f, indent=2)
+
         return jsonify(response)
 
     return jsonify({"error": "invalid file type"}), 400
+
+@app.route("/api/logs")
+def get_logs():
+    with open(LOG_FILE, "r") as f:
+        logs = json.load(f)
+    return jsonify(logs)
 
 if __name__ == "__main__":
     # For dev only: set debug True

@@ -1,6 +1,9 @@
 Flask
-pytesseract
+flask-cors
+python-dotenv
 opencv-python
 Pillow
-python-dotenv
-flask-cors
+ultralytics
+paddleocr
+shapely
+numpy

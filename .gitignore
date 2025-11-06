@@ -2,3 +2,5 @@ __pycache__/
 test/
 uploads/
 .venv/
+debug_crop.jpg
+debug_prepped.jpg

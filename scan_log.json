@@ -1,14 +1,167 @@
 [
   {
-    "plate_raw": "MH20EE7602",
-    "plate_normalized": "MH20EE7602",
-    "banned": true,
-    "image": "car_image2.jpg"
+    "plate_raw": "TN48BU1299",
+    "plate_normalized": "TN48BU1299",
+    "make": "VOLKSWAGEN",
+    "model": "VIRTUS TSI COMFORTLINE MT (999CC)",
+    "registration_year": 2023,
+    "age": 2,
+    "banned": false,
+    "error": null,
+    "image": "RealLife.jpeg.jpg"
   },
   {
-    "plate_raw": "MH20EE7602",
-    "plate_normalized": "MH20EE7602",
+    "plate_raw": "MH12DE1433",
+    "plate_normalized": "MH12DE1433",
+    "make": "FORD",
+    "model": "FIESTA",
+    "registration_year": 2006,
+    "age": 19,
     "banned": true,
-    "image": "car_image2.jpg"
+    "error": null,
+    "image": "d1.JPG"
+  },
+  {
+    "plate_raw": "MH12DE1433",
+    "plate_normalized": "MH12DE1433",
+    "make": "",
+    "model": "",
+    "registration_year": null,
+    "age": null,
+    "banned": false,
+    "error": null,
+    "image": "d1.JPG"
+  },
+  {
+    "plate_raw": "TN48BU1299",
+    "plate_normalized": "TN48BU1299",
+    "make": "",
+    "model": "",
+    "registration_year": null,
+    "age": null,
+    "banned": false,
+    "error": null,
+    "image": "RealLife.jpeg.jpg"
+  },
+  {
+    "plate_raw": "MH12DE1433",
+    "plate_normalized": "MH12DE1433",
+    "make": "",
+    "model": "",
+    "registration_year": null,
+    "age": null,
+    "banned": false,
+    "error": null,
+    "image": "d1.JPG"
+  },
+  {
+    "plate_raw": "MH12DE1433",
+    "plate_normalized": "MH12DE1433",
+    "make": "FORD",
+    "model": "FIESTA",
+    "registration_year": 2006,
+    "age": 19,
+    "banned": true,
+    "error": null,
+    "image": "d1.JPG"
+  },
+  {
+    "plate_raw": "TN48BU1299",
+    "plate_normalized": "TN48BU1299",
+    "make": "VOLKSWAGEN",
+    "model": "VIRTUS TSI COMFORTLINE MT (999CC)",
+    "registration_year": 2023,
+    "age": 2,
+    "banned": false,
+    "error": null,
+    "image": "RealLife.jpeg.jpg"
+  },
+  {
+    "plate_raw": "RJ14CV0002",
+    "plate_normalized": "RJ14CV0002",
+    "make": "KIA MOTORS",
+    "model": "SELTOS D 1.5 GTX PLUS AT (1493CC)",
+    "registration_year": 2021,
+    "age": 4,
+    "banned": false,
+    "error": null,
+    "image": "image.jpg"
+  },
+  {
+    "plate_raw": "TN48BU1299",
+    "plate_normalized": "TN48BU1299",
+    "make": "VOLKSWAGEN",
+    "model": "VIRTUS TSI COMFORTLINE MT (999CC)",
+    "registration_year": 2023,
+    "age": 2,
+    "banned": false,
+    "error": null,
+    "image": "RealLife.jpeg.jpg"
+  },
+  {
+    "plate_raw": "TN48BU1299",
+    "plate_normalized": "TN48BU1299",
+    "make": "VOLKSWAGEN",
+    "model": "VIRTUS TSI COMFORTLINE MT (999CC)",
+    "registration_year": 2023,
+    "age": 2,
+    "banned": false,
+    "error": null,
+    "image": "RealLife.jpeg.jpg"
+  },
+  {
+    "plate_raw": "MH12DE1433",
+    "plate_normalized": "MH12DE1433",
+    "make": "",
+    "model": "",
+    "registration_year": null,
+    "age": null,
+    "banned": false,
+    "error": null,
+    "image": "d1.JPG"
+  },
+  {
+    "plate_raw": "MH12DE1433",
+    "plate_normalized": "MH12DE1433",
+    "make": "",
+    "model": "",
+    "registration_year": null,
+    "age": null,
+    "banned": false,
+    "error": null,
+    "image": "d1.JPG"
+  },
+  {
+    "plate_raw": "MH12DE1433",
+    "plate_normalized": "MH12DE1433",
+    "make": "FORD",
+    "model": "FIESTA",
+    "registration_year": 2006,
+    "age": 19,
+    "banned": true,
+    "error": null,
+    "image": "d1.JPG"
+  },
+  {
+    "plate_raw": "MH12DE1433",
+    "plate_normalized": "MH12DE1433",
+    "make": "FORD",
+    "model": "FIESTA",
+    "registration_year": 2006,
+    "age": 19,
+    "banned": true,
+    "error": null,
+    "image": "d1.JPG"
+  },
+  {
+    "plate_raw": "MH12DE1433",
+    "plate_normalized": "MH12DE1433",
+    "make": "FORD",
+    "model": "FIESTA",
+    "registration_year": 2006,
+    "age": 19,
+    "banned": true,
+    "error": null,
+    "image": "d1.JPG"
   }
 ]

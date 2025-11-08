@@ -11,9 +11,9 @@ NOW before you run our project , make sure of these PREREQUISITES :-
 
 1) Make sure to install all the required modules using
            pip install -r requirements.txt
-2) Making an account and getting the username at [<RegCheck>](<https://www.carregistrationapi.in>) for the API.
-3) We have used a OCR engine called Tesseract to enhance our OCR models , you would have to install the .exe file from
-           [<Tesseract.exe>](<https://github.com/UB-Mannheim/tesseract/wiki>)
+2) Make an account and get your username from [RegCheck](https://www.carregistrationapi.in) for the API.
+3) We have used a OCR engine called **Tesseract** to enhance our OCR models , you would have to install the .exe file from
+           [<Tesseract.exe>](https://github.com/UB-Mannheim/tesseract/wiki)
    Also make sure to add the path of tesseract.exe to your ENVIRONMENT PATH VARIABLE or 
    We recommend making a .env file with the variables
     REGCHECK_USERNAME = "Username for the RegCheck API Website - which you will need to retrieve make,model and registration year

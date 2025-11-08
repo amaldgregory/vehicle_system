@@ -4,13 +4,15 @@ import re
 import cv2
 import numpy as np
 from typing import List, Tuple
-
+import os
+from dotenv import load_dotenv
 import easyocr
 import pytesseract
 from ultralytics import YOLO  # YOLOv8 detector
-pytesseract.pytesseract.tesseract_cmd = r"C:\Users\rohit\AppData\Local\Programs\Tesseract-OCR\tesseract.exe"
-# Point pytesseract to your install if needed (Windows)
-# pytesseract.pytesseract.tesseract_cmd = r"C:\Users\rohit\AppData\Local\Programs\Tesseract-OCR\tesseract.exe"
+load_dotenv()
+tesseract_cmd = os.getenv("TESSERACT_PATH")
+if tesseract_cmd:
+    pytesseract.pytesseract.tesseract_cmd = tesseract_cmd
 
 
 _yolo_model = None

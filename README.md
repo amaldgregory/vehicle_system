@@ -14,13 +14,15 @@ NOW before you run our project , make sure of these PREREQUISITES :-
 2) Make an account and get your username from [RegCheck](https://www.carregistrationapi.in) for the API.
 3) We have used a OCR engine called **Tesseract** to enhance our OCR models , you would have to install the .exe file from
            [<Tesseract.exe>](https://github.com/UB-Mannheim/tesseract/wiki)
-   Also make sure to add the path of tesseract.exe to your ENVIRONMENT PATH VARIABLE or 
-   We recommend making a .env file with the variables
-    REGCHECK_USERNAME = "Username for the RegCheck API Website - which you will need to retrieve make,model and registration year
-    ALERT_SMTP_USER = "Sender email-id"
-    ALERT_SMTP_PASS = "App Password for Sender email-id"
-    ALERT_RECIPIENTS = "Recipien ts emai-id"
-    ALERT_SMTP_HOST = smtp.gmail.com
-    ALERT_SMTP_PORT = 587
-    TESSERACT_PATH = "PATH where tesseract.exe is installed"
+Also make sure to add the path of `tesseract.exe` to your **System Environment PATH Variable**.  
+**OR**  
+We recommend creating a `.env` file and include the following values:
+
+- REGCHECK_USERNAME = "Your RegCheck API username"
+- ALERT_SMTP_USER = "Sender email address"
+- ALERT_SMTP_PASS = "Email App Password"
+- ALERT_RECIPIENTS = "Recipient email(s)"
+- ALERT_SMTP_HOST = smtp.gmail.com
+- ALERT_SMTP_PORT = 587
+- TESSERACT_PATH = "Path where tesseract.exe is installed"
 
